@@ -1,1 +1,1 @@
-	<div class="notificacoes">99</div>
+	<div class="notificacoes">0</div>
