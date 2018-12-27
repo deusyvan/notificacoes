@@ -1,14 +1,14 @@
 <?php 
 class verificarController extends controller{
     
-    public function __construct() {
+   /*  public function __construct() {
         parent::__construct();
-    }
+    } */
     
     public function index(){
         
         
-        $dados = array('notificacoes' => '');
+        $dados = array('notificacoes' => 0);
         
         $n = new Notificacoes();
         $notificacoes = $n->getVerificar();
