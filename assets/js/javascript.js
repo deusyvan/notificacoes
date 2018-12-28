@@ -24,4 +24,10 @@ $(function() {
 	$('.notificacoes').on('click', function() {
 		
 	});
+	
+	$('.addNotificacao').on('click', function() {
+		$.ajax({
+			url:'http://localhost/notificacoes/adicionar'
+		});
+	});
 });
