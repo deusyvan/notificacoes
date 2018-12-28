@@ -6,7 +6,7 @@ class Notificacoes extends model{
         $sql = "SELECT * FROM tb_notificacoes WHERE id_user = '1' AND lido = '0'";
         $sql = $this->db->query($sql);
         
-        $array = array();
+        $array = array('qt'=>0);
         
         if($sql->rowCount() > 0){
             
@@ -15,7 +15,7 @@ class Notificacoes extends model{
             return $array;
             
         } else {
-            return 0;
+            return $array;
         }
     }
 }

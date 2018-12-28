@@ -1,6 +1,10 @@
 <?php 
 class controller {
     
+    public function __construct(){
+        
+    }
+    
     public function loadView($viewName, $viewData = array()){
         
         extract($viewData);
