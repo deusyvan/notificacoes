@@ -39,4 +39,19 @@ class Notificacoes extends model{
         
         
     }
+    
+    public function ler(){
+        $sql = "SELECT * FROM tb_notificacoes WHERE id_user = '1'";
+        $sql = $this->db->query($sql);
+        
+        if ($sql->rowCount() > 0){
+            foreach ($sql->fetchAll() as $item){
+                $propriedades = json_decode($item['propriedades']);
+                echo "TIPO: ".$item['notificacao_tipo']."<br/>";
+                print_r($propriedades);
+                echo "<hr/>";
+                
+            }
+        }
+    }
 }
