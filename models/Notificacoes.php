@@ -47,8 +47,14 @@ class Notificacoes extends model{
         if ($sql->rowCount() > 0){
             foreach ($sql->fetchAll() as $item){
                 $propriedades = json_decode($item['propriedades']);
-                echo "TIPO: ".$item['notificacao_tipo']."<br/>";
-                print_r($propriedades);
+                //echo "TIPO: ".$item['notificacao_tipo']."<br/>";
+                
+                if ($item['notificacao_tipo'] == 'MSG'){
+                    echo "MENSAGEM: ".$propriedades->msg."<br/>";
+                } elseif ($item['notificacao_tipo'] == 'CURTIDA'){
+                    echo $propriedades->curtidor." curtiu a foto ".$propriedades->id_foto."<br/>";
+                }
+                
                 echo "<hr/>";
                 
             }

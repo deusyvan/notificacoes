@@ -22,9 +22,8 @@ $(function() {
 	verificarNotificacao();
 	
 	$('.notificacoes').on('click', function() {
-		$.ajax({
-			url:'http://localhost/notificacoes/ler'
-		});
+		
+		window.location = 'http://localhost/notificacoes/ler';
 	});
 	
 	$('.addNotificacao').on('click', function() {

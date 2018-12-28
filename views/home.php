@@ -3,3 +3,4 @@
 	<hr/>
 	
 	<button class="addNotificacao">Criar Notificação</button>
+	<div class="lista"></div>

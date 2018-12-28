@@ -6,7 +6,7 @@ class lerController extends controller{
     }
     
     public function index(){
-        
+        $notificacoes = array();
         $n = new Notificacoes();
         $notificacoes = $n->ler();
     }
